@@ -43,6 +43,13 @@ class Student
     DB[:conn].execute(sql)  
   end
   
+   def self.students_below_12th_grade
+    sql = "SELECT * FROM students WHERE grade < ?"
+    DB[:conn].execute(sql,12).map do |return_array|
+      new_from_db(return_array)
+    end
+  end
+  
   def self.students_below_12th_grade
     sql = <<-SQL
       SELECT * 
