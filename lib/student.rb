@@ -62,7 +62,7 @@ class Student
       LIMIT ? 
      SQL
      
-     DB[:conn].execute(sql, LIMIT = X)
+     DB[:conn].execute(sql, X)
    end
   
   def self.first_student_in_grade_10
