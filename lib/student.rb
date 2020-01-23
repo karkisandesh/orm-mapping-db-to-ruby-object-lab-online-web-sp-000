@@ -59,7 +59,7 @@ class Student
       SELECT * 
       FROM students
       WHERE grade = ? 
-      LIMIT X 
+      LIMIT ? 
      SQL
      
      DB[:conn].execute(sql, grade = 10)
